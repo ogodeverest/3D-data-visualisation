@@ -4,6 +4,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { BufferGeometryUtils } from "three/examples/jsm/utils/BufferGeometryUtils";
 import gsap from "gsap";
+
+const dataUrl = "https://d-data-visualisation.web.app/";
 function main() {
   const canvas = document.getElementById("canvas");
   const renderer = new THREE.WebGLRenderer({ canvas });
@@ -27,7 +29,7 @@ function main() {
 
   {
     const loader = new THREE.TextureLoader();
-    const texture = loader.load("./resources/world.jpg", render);
+    const texture = loader.load(dataUrl + "world.jpg", render);
     const geometry = new THREE.SphereBufferGeometry(1, 64, 32);
     const material = new THREE.MeshBasicMaterial({ map: texture });
     scene.add(new THREE.Mesh(geometry, material));
@@ -176,12 +178,12 @@ function main() {
       {
         name: "men",
         hueRange: [0.7, 0.3],
-        url: "https://d-data-visualisation.web.app/male.asc",
+        url: dataUrl + "male.asc",
       },
       {
         name: "women",
         hueRange: [0.9, 1.1],
-        url: "https://d-data-visualisation.web.app/female.asc",
+        url: dataUrl + "female.asc",
       },
     ];
 
