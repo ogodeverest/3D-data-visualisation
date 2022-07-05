@@ -2,12 +2,16 @@
   "name": "3d-data-visualisation",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://ogodeverest.github.io/3D-data-visualisation",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "vite": "^2.9.9"
   },
   "dependencies": {

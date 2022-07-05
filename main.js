@@ -176,12 +176,12 @@ function main() {
       {
         name: "men",
         hueRange: [0.7, 0.3],
-        url: "./data/male.asc",
+        url: "https://d-data-visualisation.web.app/male.asc",
       },
       {
         name: "women",
         hueRange: [0.9, 1.1],
-        url: "./data/female.asc",
+        url: "https://d-data-visualisation.web.app/female.asc",
       },
     ];
 
